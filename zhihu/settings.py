@@ -58,7 +58,7 @@ DOWNLOADER_MIDDLEWARES = {
    'zhihu.middlewares.ZhihuDownloaderMiddleware': None,
    'zhihu.middlewares.RandomUserAgentMiddleware':'543',
 }
-##随en
+#随机更换User-Agen
 RANDOM_UA_TYPE= 'random'
 
 # Enable or disable extensions
