@@ -54,9 +54,12 @@ DEFAULT_REQUEST_HEADERS = {
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#    'zhihu.middlewares.ZhihuDownloaderMiddleware': 543,
-#}
+DOWNLOADER_MIDDLEWARES = {
+   'zhihu.middlewares.ZhihuDownloaderMiddleware': None,
+   'zhihu.middlewares.RandomUserAgentMiddleware':'543',
+}
+##随en
+RANDOM_UA_TYPE= 'random'
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
@@ -91,5 +94,7 @@ ITEM_PIPELINES = {
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
+
+#mongodb数据库
 MONGO_URI = '127.0.0.1'
 MONGO_DATABASE = 'zhihu'
